@@ -1,44 +1,211 @@
-/* styles.css */
+/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
 }
 
+h1 {
+    padding: 15px;
+}
+/* Navbar Styling */
 .navbar {
-    background-color: #333;
-    padding: 10px;
+    background-color: #333; /* Dark gray for navbar */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for a futuristic feel */
 }
 
 .menu {
     list-style: none;
     display: flex;
-    padding: 2vw;
     justify-content: space-around;
+    padding: 10px;
+    background-color: #333;
 }
 
 .menu-item {
     color: white;
-    cursor: pointer;
-    padding: 2vw 4vw 2vw 4vw;
+    padding: 20px 40px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 4px;
 }
 
 .menu-item:hover {
-    background-color: #575757;
+    background-color: #65b9c3; /* Hover effect with accent color */
+    color: #333; /* Text darkens on hover */
+    transform: scale(1.05); /* Scale up for hover effect */
 }
-
 
 .active {
-    background-color: #007bff;
+    background-color: #d95252; /* Accent color for the active menu */
+    color: white;
 }
-
+/* Main Content Styling */
 .content {
     padding: 20px;
     font-size: 1.2em;
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    padding: 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Main Section Padding */
+main {
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #65b9c3;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 0 auto 20px auto;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #d95252;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td{
+    padding: 10px;
+}
+
+
+/* Contact Section */
+#contact h1 {
+    font-size: 2.5em;
+    color: #333;
+    display: inline-block;
+}
+
+#contact p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Links inside contact section */
+#cont-link{
+    color: #d95252; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+#cont-link:hover {
+    color: #65b9c3;
+    border-bottom: 2px solid #65b9c3; 
+}
+
+/* Email Form Styling */
+#email-form form {
+    background-color: #ffffff; /* Dark background for form */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#email-form:hover {
+    transform: scale(1.02);
+}
+
+#email-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #d95252; /* Accent border color */
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: white;
+}
+
+#email-form input[type="submit"] {
+    background-color: #d95252;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#email-form input[type="submit"]:hover {
+    background-color: #65b9c3;
+    transform: scale(1.05);
 }
