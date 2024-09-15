@@ -1,0 +1,43 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #575757;
+}
+
+
+.active {
+    background-color: #007bff;
+}
+
+.content {
+    padding: 20px;
+    font-size: 1.2em;
+}
