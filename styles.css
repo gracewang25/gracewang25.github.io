@@ -18,6 +18,9 @@ h1 {
     padding: 15px;
 }
 
+#padding {
+    padding: 20px;
+}
 
 table {
     background-color: white;
