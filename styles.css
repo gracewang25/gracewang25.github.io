@@ -1,3 +1,27 @@
+/* Color Context (CSS Variables) */
+:root {
+    --background-color: #d3d3d3; /* Light gray */
+    --primary-text-color: #333; /* Dark gray */
+    --navbar-background: #333; /* Dark gray */
+    --menu-item-text: white;
+    --active-color: #d95252; /* Reddish */
+    --hover-color: #65b9c3; /* Teal */
+    --card-background: white;
+    --card-shadow: #00000033; /* Transparent black for shadow */
+    --card-hover-shadow: #65b9c3; /* Teal shadow on hover */
+    --link-color: #d95252; /* Reddish */
+    --link-hover-color: #65b9c3; /* Teal */
+    --table-border-color: #d95252; /* Reddish */
+    --form-border-color: #65b9c3; /* Teal */
+    --submit-button-bg: #d95252; /* Reddish */
+    --submit-button-hover-bg: #65b9c3; /* Teal */
+    --project-card-bg: #65b9c3; /* Teal */
+    --project-card-text: white;
+    --project-card-shadow: rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    --project-link-color: #d95252; /* Reddish */
+    --project-link-hover-color: white;
+}
+
 /* Reset styles */
 * {
     margin: 0;
@@ -7,9 +31,9 @@
 
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d3d3d3;
-    color: #333;
+    font-family: 'Times New Roman', Times, serif; /* Changed font */
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
     line-height: 1.6;
     text-align: center;
 }
@@ -22,23 +46,11 @@ h1 {
     padding: 50px;
 }
 
-table {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #00000033;
-    padding: 5px;
-    width: 80%;
-    border-style: collapse;
-}
-
-th {
-    border-right: 2px solid #d95252;
-}
 /* Navbar */
 .navbar {
-    background-color: #333;
+    background-color: var(--navbar-background);
     padding: 20px;
-    box-shadow: 0 4px 8px #00000033;
+    box-shadow: 0 4px 6px var(--card-shadow); /* Reduced shadow */
 }
 
 .menu {
@@ -46,27 +58,27 @@ th {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #333;
+    background-color: var(--navbar-background);
 }
 
 .menu-item {
-    color: white;
-    padding: 20px 40px;
+    color: var(--menu-item-text);
+    padding: 15px 30px; /* Slightly reduced padding */
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    border-radius: 4px;
+    border-radius: 3px; /* Reduced border-radius */
     margin: 2px;
 }
 
 .menu-item:hover {
-    background-color: #65b9c3;
-    color: #333;
+    background-color: var(--hover-color);
+    color: var(--primary-text-color);
     transform: scale(1.05);
 }
 
 .active {
-    background-color: #d95252;
-    color: white;
+    background-color: var(--active-color);
+    color: var(--menu-item-text);
 }
 
 /* Content */
@@ -79,24 +91,25 @@ th {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: var(--navbar-background);
+    color: var(--menu-item-text);
     position: fixed;
     width: 100%;
     bottom: 0;
 }
-/* Assignments */
-#assignments h1{
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 40px;
 
+/* Assignments Section */
+#assignments h1 {
+    font-size: 2.5em;
+    color: var(--primary-text-color);
+    margin-bottom: 40px;
 }
+
 /* Card styling */
 .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px #65b9c3;
+    background-color: var(--card-background);
+    border-radius: 4px; /* Reduced border-radius */
+    box-shadow: 0 2px 4px var(--card-hover-shadow); /* Reduced shadow */
     padding: 20px;
     margin: 0 auto 20px;
     max-width: 80%;
@@ -118,7 +131,7 @@ footer {
 }
 
 .card a {
-    color: #d95252;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -129,126 +142,140 @@ footer {
 
 /* Table styling */
 table {
+    background-color: var(--card-background);
+    border-radius: 5px; /* Reduced border-radius */
+    box-shadow: 0 2px 4px var(--card-shadow); /* Reduced shadow */
     padding: 5px;
+    width: 80%;
+    border-collapse: collapse; /* Use collapse for cleaner borders */
     text-align: center;
-    margin: auto;
+    margin: 20px auto; /* Added margin */
 }
 
 th, td {
     padding: 10px;
+    border: 1px solid var(--background-color); /* Added subtle border */
+}
+
+th {
+    border-right: 2px solid var(--table-border-color);
+    background-color: #f2f2f2; /* Light background for header */
 }
 
 /* Contact Section */
 #contact h1 {
     font-size: 2.5em;
-    color: #333;
+    color: var(--primary-text-color);
 }
 
 #contact p {
     font-size: 1.2em;
-    color: #333;
+    color: var(--primary-text-color);
     margin-bottom: 20px;
 }
 
 /* Links inside contact section */
 #cont-link {
-    color: #d95252;
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 2px solid transparent;
 }
 
 #cont-link:hover {
-    color: #65b9c3;
-    border-bottom: 2px solid #65b9c3;
+    color: var(--link-hover-color);
+    border-bottom: 2px solid var(--link-hover-color);
 }
 
 /* Email Form */
-#email-form form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+#email-form {
+     /* Allow hover effect for the form container if needed */
+    transition: transform 0.2s ease;
+    max-width: 600px; /* Constrain form width */
+    margin: 20px auto; /* Center form */
 }
+#email-form form {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 6px; /* Reduced border-radius */
+    box-shadow: 0 2px 6px var(--card-shadow); /* Reduced shadow */
+}
+
 
 #email-form:hover {
     transform: scale(1.02);
 }
 
-#email-form textarea{
+#email-form textarea {
     width: 100%;
     height: 100px;
     padding: 10px;
-    border: 2px solid #65b9c3;
-    border-radius: 8px;
+    border: 1px solid var(--form-border-color); /* Slightly thinner border */
+    border-radius: 4px; /* Reduced border-radius */
     font-size: 1.1em;
-    color: #333;
-    background-color: white;
+    color: var(--primary-text-color);
+    background-color: var(--card-background);
+    font-family: 'Times New Roman', Times, serif; /* Ensure font consistency */
 }
 
-textarea:focus{
+textarea:focus {
     outline: none;
+    border-color: var(--link-hover-color); /* Highlight focus */
+    box-shadow: 0 0 5px var(--form-border-color); /* Add subtle glow on focus */
 }
 
 #email-form input[type="submit"] {
-    background-color: #d95252;
-    color: white;
+    background-color: var(--submit-button-bg);
+    color: var(--menu-item-text);
     padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px; /* Reduced border-radius */
     font-size: 1.1em;
     cursor: pointer;
     margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition */
 }
 
 #email-form input[type="submit"]:hover {
-    background-color: #65b9c3;
+    background-color: var(--submit-button-hover-bg);
     transform: scale(1.05);
 }
 
 /* Projects Section */
 #projects h1 {
     font-size: 2.5em;
-    color: #333;
+    color: var(--primary-text-color);
     margin-bottom: 20px;
 }
 
 /* Project Grid */
+/* Removed duplicate .project-grid definitions */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* gap: 20px; */
-}
-
-/* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px; /* Reduced gap between cards */
-}
-
-/* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px; /* Reduced gap between cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax slightly */
+    gap: 15px; /* Adjusted gap */
+    padding: 0 10px; /* Add some padding to the grid container */
+    max-width: 1200px; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
 }
 
 /* Project Card */
 .project-card {
-    background-color: #65b9c3;
-    color: white;
+    background-color: var(--project-card-bg);
+    color: var(--project-card-text);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px; /* Reduced border-radius */
+    box-shadow: 0 4px 8px var(--project-card-shadow); /* Adjusted shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Use space-between if content height varies */
     align-items: center;
-    width: 300px; /* Fixed width for consistent sizing */
-    height: 300px; /* Fixed height to maintain square */
-    margin: auto;
+    /* Removed fixed width/height to allow content to determine size within grid constraints */
+    /* width: 300px; */
+    /* height: 300px; */
+    min-height: 250px; /* Ensure a minimum height */
+    text-align: center; /* Center text within card */
 }
 
 .project-card h2 {
@@ -260,25 +287,27 @@ textarea:focus{
 .project-card p {
     font-size: 1.1em;
     margin-bottom: 20px;
+    flex-grow: 1; /* Allow paragraph to take available space */
 }
 
 .project-card a {
-    color: #d95252;
+    color: var(--project-link-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 2px solid transparent;
+    margin-top: auto; /* Push link towards the bottom */
+    padding-top: 10px; /* Add some space above the link */
 }
 
 .project-card a:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #65b9c3;
+    color: var(--project-link-hover-color);
+    border-bottom: 2px solid var(--project-link-hover-color); /* Use color variable */
 }
 
 /* Work Section */
 #work-experience h1 {
     font-size: 2.5em;
-    color: #333;
+    color: var(--primary-text-color);
     margin-bottom: 40px;
-
 }
