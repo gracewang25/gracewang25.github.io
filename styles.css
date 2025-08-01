@@ -1,19 +1,20 @@
-/* Modern Dark Red & Pink Color Scheme */
+/* Modern Light Red & Pink Color Scheme */
 :root {
-    --primary-dark: #1a0f0f; /* Very dark red/black */
-    --secondary-dark: #2d1414; /* Dark red */
-    --accent-red: #8b0000; /* Dark red */
+    --primary-dark: #f8f6f7; /* Light off-white background */
+    --secondary-dark: #fbeaec; /* Very light pink */
+    --accent-red: #6e0202; /* Dark red */
+    --accent-light-red: #a50e2f; /* Soft pink */
     --accent-pink: #ff6b8a; /* Soft pink */
-    --accent-light-pink: #ffb3c1; /* Light pink */
-    --text-primary: #f5f5f5; /* Off-white */
-    --text-secondary: #e0e0e0; /* Light gray */
+    /* --accent-pink: #ffb3c1; Light pink */
+    --text-primary: #2d1414; /* Dark text for contrast */
+    --text-secondary: #4a2a2a; /* Slightly lighter dark text */
     --text-muted: #b0b0b0; /* Muted gray */
-    --card-bg: rgba(45, 20, 20, 0.8); /* Semi-transparent dark red */
-    --card-hover-bg: rgba(139, 0, 0, 0.2); /* Subtle red highlight */
-    --shadow-light: rgba(255, 107, 138, 0.1); /* Subtle pink shadow */
-    --shadow-medium: rgba(255, 107, 138, 0.2); /* Medium pink shadow */
-    --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-pink) 100%);
+    --card-bg: rgba(255, 255, 255, 0.95); /* Clean white card */
+    --card-hover-bg: rgba(255, 107, 138, 0.07); /* Subtle pink highlight */
+    --shadow-light: rgba(255, 107, 138, 0.08); /* Subtle pink shadow */
+    --shadow-medium: rgba(255, 107, 138, 0.15); /* Medium pink shadow */
+    --gradient-primary: linear-gradient(135deg, #f8f6f7 0%, #fbeaec 100%);
+    --gradient-accent: linear-gradient(135deg, #8b0000 0%, #be3f5a 100%);
 }
 
 /* Reset styles */
@@ -49,7 +50,7 @@ h2 {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--accent-light-pink);
+    color: var(--accent-pink);
 }
 
 h3 {
@@ -70,14 +71,13 @@ p {
 
 /* Modern Navbar */
 .navbar {
-    background: rgba(26, 15, 15, 0.98);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.95);
+    border-bottom: none;
+    box-shadow: 0 2px 20px var(--shadow-light);
     padding: 1.2rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(139, 0, 0, 0.3);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .menu {
@@ -149,13 +149,17 @@ p {
     align-items: center;
     margin-bottom: 4rem;
     gap: 2rem;
+    background: var(--card-bg);
+    box-shadow: 0 8px 32px var(--shadow-light);
+    border-radius: 20px;
+    padding: 2rem 0;
 }
 
 .profile-picture {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 4px solid var(--accent-pink);
+    border: 4px solid var(--accent-light-red);
     box-shadow: 0 10px 30px var(--shadow-medium);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover;
@@ -183,8 +187,8 @@ p {
 }
 
 .profile-placeholder:hover {
-    border-color: var(--accent-light-pink);
-    color: var(--accent-light-pink);
+    border-color: var(--accent-pink);
+    color: var(--accent-pink);
 }
 
 /* Bio Section */
@@ -231,7 +235,7 @@ p {
 
 .skill-tag {
     background: var(--gradient-accent);
-    color: var(--text-primary);
+    color: #fff !important;
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -240,11 +244,12 @@ p {
 
 /* Modern Footer */
 footer {
-    background: rgba(26, 15, 15, 0.95);
+    background: rgba(255,255,255,0.95);
+    border-top: none;
+    box-shadow: 0 -2px 20px var(--shadow-light);
     padding: 2rem;
     text-align: center;
-    border-top: 1px solid var(--accent-red);
-    margin-top: 4rem;
+    color: var(--text-secondary);
 }
 
 .footer-content {
@@ -302,7 +307,7 @@ footer {
 
 .card h2 {
     margin-bottom: 1.5rem;
-    color: var(--accent-light-pink);
+    color: var(--accent-pink);
 }
 
 .card p {
@@ -313,7 +318,7 @@ footer {
 .card a {
     display: inline-block;
     background: var(--gradient-accent);
-    color: var(--text-primary);
+    color: #fff !important;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -357,7 +362,7 @@ footer {
 
 .project-card h2 {
     margin-bottom: 1.5rem;
-    color: var(--accent-light-pink);
+    color: var(--accent-pink);
 }
 
 .project-card p {
@@ -368,7 +373,7 @@ footer {
 
 .project-card a {
     background: var(--gradient-accent);
-    color: var(--text-primary);
+    color: #fff !important;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 25px;
@@ -391,7 +396,8 @@ footer {
     margin: 1.5rem auto;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px var(--shadow-light);
+    box-shadow: 0 8px 32px var(--shadow-light);
+    background: #fff;
 }
 
 .video-container video {
@@ -463,7 +469,7 @@ footer {
 }
 
 .contact-card h3 {
-    color: var(--accent-light-pink);
+    color: var(--accent-pink);
     margin-bottom: 1rem;
 }
 
@@ -475,7 +481,7 @@ footer {
 .contact-link {
     display: inline-block;
     background: var(--gradient-accent);
-    color: var(--text-primary);
+    color: #fff !important;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -498,14 +504,14 @@ footer {
 .download-btn {
     display: inline-block;
     background: var(--gradient-accent);
-    color: var(--text-primary);
+    color: #fff !important;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px var(--shadow-light);
+    box-shadow: 0 2px 10px var(--shadow-light);
 }
 
 .download-btn:hover {
